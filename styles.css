@@ -2,8 +2,33 @@ body {
     margin: 0px;
     padding: 0px;
 
-    background-color: green;
+    height: 100%;
+
+    /* background-image: url(Images/DeckImage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
+
+.BackGround {
+    /* The image used */
+    background-image: url("Images/DeckImage.jpg");
+  
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100vh;
+    width: 100vw;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    z-index: -1;
+  }
 
 .layout {
     display: flex;
@@ -13,6 +38,8 @@ body {
 .navbar {
     padding: 0px;
     background-color: #faf4f4 !important;
+    position: fixed;
+    width: 100%;
 }
 
 .nav-item {
@@ -31,31 +58,63 @@ body {
     
 }
 
-.info {
-}
-
 .navbar-brand {
     font-size: 20px;
     font-weight:bolder;
 }
 
+.info {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-quote {
+    font-weight: bolder;
+    font-size: 50px;
+    color:white;
+}
+
 .info-images {
     display: flex;
     flex-wrap: wrap;
-    gap: 8vw;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 .info-image {
-    background-color: blue;
+    background-color: white;
 }
 .info-image-1 {
     width: 750px;
     height: 600px;
+
+    background-image: url("Images/DeckImage.jpg");
 }
 
 .info-image-2 {
     width: 500px;
     height: 500px;
+
+    opacity: .65;
+
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    color:black;
+
 }
+
+@media only screen and (max-width: 1358px) {
+    .info {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 100px;
+    }
+  }
